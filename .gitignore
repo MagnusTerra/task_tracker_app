@@ -1,3 +1,7 @@
 db/db.json
 
 */__pycache__
+
+.venv
+
+*.egg-info
