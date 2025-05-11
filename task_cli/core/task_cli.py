@@ -2,6 +2,7 @@ from pathlib import Path
 import sys
 import json
 from datetime import datetime
+from .db import DB
 
 Task = dict[
     "id": int,
@@ -11,28 +12,6 @@ Task = dict[
     "created_at": str,
     "updated_at": str
 ]
-
-
-class DB:
-    def create_db(self):
-        try:
-            self.db_path = Path("./db/db.json")
-            if not self.db_path.exists():
-                self.db_path.write_text("[]")
-        except Exception as e:
-            print(f"Error: {e}")
-            sys.exit(1)
-    updated_at: str
-
-class DB:
-    def create_db(self):
-        try:
-            self.db_path = Path("./db/db.json")
-            if not self.db_path.exists():
-                self.db_path.write_text("[]")
-        except Exception as e:
-            print(f"Error: {e}")
-            sys.exit(1)
 
 class TaskCLI:
     def __init__(self):
